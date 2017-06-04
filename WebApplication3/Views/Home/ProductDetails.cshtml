@@ -1,0 +1,47 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html ng-app="myModule">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" /> 
+    <script src="~/Scripts/angular.min.js"></script>
+    <script src="~/Scripts/Product.js"></script>
+    <title>ProductDetails</title>
+</head>
+<body ng-controller="Mycontroller">
+    <div >
+        
+        <table >
+            
+            <thead>
+                <tr>
+                  @*<th>ID</th>
+                  <th>Image</th>
+                  <th>Description</th>*@
+
+                </tr>
+            </thead>
+            <tbody  ng-repeat="Product in Product">
+                <tr>
+                    @*<td >{{Product.ProductID}}</td>*@
+                    <td><div>
+                            <img src="~/Content/vegetables.jpg" height="150" width="150" />
+                        </div>
+                    </td>
+                    <td >{{Product.ProdDesc}}</td>
+                </tr>
+               
+            </tbody>
+        </table>
+    </div>
+
+  
+
+    
+</body>  
+</html>
